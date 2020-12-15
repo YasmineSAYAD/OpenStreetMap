@@ -18,11 +18,10 @@ var popup = L.popup();
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
-        .setContent("Coordonnées " +'( '+ e.latlng +' )')
+         .setContent("Coordonnées " +'( '+ e.latlng.lat.toString()+ ' , '  +e.latlng.lng.toString()+' )')
         .openOn(map);
       
-      
-}
+     }
 
 map.on('click', onMapClick);
 
